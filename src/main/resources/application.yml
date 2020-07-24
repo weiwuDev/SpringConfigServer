@@ -1,5 +1,9 @@
-server:
-  port: 8888
 spring:
-  application:
-    name: SpringConfigServer
+  rabbitmq:
+    host: ${rabbitmq_host:localhost}
+    port: ${rabbitmq_port:5672}
+    username: ${rabbitmq_username:guest}
+    password: ${rabbitmq_password:guest}
+
+
+

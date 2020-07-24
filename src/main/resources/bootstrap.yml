@@ -1,12 +1,24 @@
+server:
+  port: ${custome_port:8888}
+
 spring:
+  application:
+    name: ${app_name:SpringConfigServer}
+
   cloud:
     config:
       server:
         git:
           uri: ${config_git_uri}
+
+  security:
+    user:
+      name: ${spring_security_username}
+      password: ${spring_security_password}
+
 encrypt:
   key-store:
-    location: classpath:server.jks
+    location: ${key_store_location:classpath:server.jks}
     alias: ${key_alias}
     password: ${store_pass}
     secret: ${key_secret}
