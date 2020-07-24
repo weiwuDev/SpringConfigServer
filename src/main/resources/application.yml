@@ -6,4 +6,3 @@ spring:
     password: ${rabbitmq_password:guest}
 
 
-
